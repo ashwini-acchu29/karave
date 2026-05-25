@@ -1084,49 +1084,49 @@ footer
         padding: 10px; 
     }  */
 
-    .header-top
+ .header-top
 {
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 12px 10px;
+    gap: 8px;
+    padding: 10px 8px;
 }
     
     /* MOBILE HEADER IMAGES */ 
 
     .side-img 
     { 
-        width: 60px; 
+        width: 45px; 
     } 
 
     .palace-img 
     { 
-        width: 85px; 
+        width: 60px; 
     } 
     
     /* HIDE EXTRA PHOTOS ON MOBILE */ 
     
-    .extra-left,
+   .extra-left,
 .extra-right
 {
     position: static;
     transform: none;
-    width: 75px;
-    height: 90px;
-    display: block;
-    margin: 5px auto;
+    width: 55px;
+    height: 70px;
+    object-fit: cover;
 }
     
     .banner-svg 
     { 
-        height: 80px; 
+        height: 60px; 
     } 
     
     .text-outline, 
     .text-fill 
     { 
-        font-size: 24px; 
+        font-size: 18px; 
         letter-spacing: 0.5px; 
     } 
     
