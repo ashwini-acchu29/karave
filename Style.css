@@ -1139,14 +1139,25 @@ header hr
         height: 90px;
         width: 100%;
     }
+
+    .banner-wrapper
+{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
     
     .text-outline,
 .text-fill
 {
-    font-size: 42px;
-    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0;
 }
 
+svg text
+{
+    dominant-baseline: middle;
+}
     .center-text
     {
         width: 100%;
