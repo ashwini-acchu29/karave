@@ -1091,80 +1091,93 @@ html, body
     overflow-x: hidden;
     max-width: 100%;
 }
+header hr
+    {
+        width: 92%;
+    }
 
-.header-top
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-    padding: 10px 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
+ .header-top
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 10px;
+        text-align: center;
+    }
     
     /* MOBILE HEADER IMAGES */ 
 
-    .side-img 
-    { 
-        width: 42px;
-    height: auto;
-    } 
+    .side-img
+    {
+        width: 55px;
+        height: auto;
+    }
 
-    .palace-img 
-    { 
-        width: 52px; 
-    } 
+    .palace-img
+    {
+        width: 65px;
+    }
+
     
     /* HIDE EXTRA PHOTOS ON MOBILE */ 
     
-   .extra-left,
-.extra-right
-{
-    position: static;
-    transform: none;
-    width: 48px;
-    height: 60px;
-    object-fit: cover;
-    margin: 0;
-}
+ .extra-left,
+    .extra-right
+    {
+        position: static;
+        transform: none;
+        width: 65px;
+        height: 80px;
+        object-fit: cover;
+        margin: 0;
+    }
     
-    .banner-svg 
-    { 
-        height: 55px; 
+    .banner-svg
+    {
+        height: 90px;
         width: 100%;
-    max-width: 100%;
-    } 
+    }
     
-    .text-outline, 
-    .text-fill 
-    { 
-        font-size: 17px; 
-        letter-spacing: 0px; 
-    } 
-    .center-text
-{
-    flex: 1 1 100%;
-    text-align: center;
-}
-    .slogan 
-    { 
-       font-size: 14px;
-    padding: 0 8px;
-    line-height: 1.5;
-    } 
-    .district
-{
-    font-size: 15px;
-}
+    .text-outline,
+    .text-fill
+    {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
 
-.reg-no
-{
-    font-size: 11px;
-    padding: 0 10px;
-}
-    
+    .center-text
+    {
+        width: 100%;
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .slogan
+    {
+        font-size: 24px;
+        margin-top: 15px;
+        line-height: 1.5;
+        color: #d32f2f;
+    }
+
+
+     .district
+    {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+
+   .reg-no
+    {
+        font-size: 15px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
 
 /* NAVIGATION */
 
