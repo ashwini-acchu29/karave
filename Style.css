@@ -1092,15 +1092,14 @@ html, body
     max-width: 100%;
 }
 
- .header-top
+.header-top
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    padding: 10px 8px;
     flex-wrap: wrap;
+    gap: 6px;
+    padding: 10px 5px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -1109,12 +1108,13 @@ html, body
 
     .side-img 
     { 
-        width: 45px; 
+        width: 42px;
+    height: auto;
     } 
 
     .palace-img 
     { 
-        width: 60px; 
+        width: 52px; 
     } 
     
     /* HIDE EXTRA PHOTOS ON MOBILE */ 
@@ -1124,14 +1124,15 @@ html, body
 {
     position: static;
     transform: none;
-    width: 55px;
-    height: 70px;
+    width: 48px;
+    height: 60px;
     object-fit: cover;
+    margin: 0;
 }
     
     .banner-svg 
     { 
-        height: 60px; 
+        height: 55px; 
         width: 100%;
     max-width: 100%;
     } 
@@ -1139,10 +1140,14 @@ html, body
     .text-outline, 
     .text-fill 
     { 
-        font-size: 18px; 
-        letter-spacing: 0.5px; 
+        font-size: 17px; 
+        letter-spacing: 0px; 
     } 
-    
+    .center-text
+{
+    flex: 1 1 100%;
+    text-align: center;
+}
     .slogan 
     { 
        font-size: 14px;
