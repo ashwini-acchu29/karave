@@ -1084,6 +1084,14 @@ footer
         padding: 10px; 
     }  */
 
+    /* FIX MOBILE HORIZONTAL SCROLL */
+
+html, body
+{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
  .header-top
 {
     display: flex;
@@ -1092,6 +1100,9 @@ footer
     align-items: center;
     gap: 8px;
     padding: 10px 8px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
 }
     
     /* MOBILE HEADER IMAGES */ 
@@ -1121,6 +1132,8 @@ footer
     .banner-svg 
     { 
         height: 60px; 
+        width: 100%;
+    max-width: 100%;
     } 
     
     .text-outline, 
@@ -1167,6 +1180,22 @@ nav
         margin: 12px; 
         padding: 18px; 
     } 
+
+    /* IMAGES FIX */
+    img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* SECTION FIX */
+    .team-section,
+.program-section,
+.last-section
+{
+    box-sizing: border-box;
+    width: 100%;
+}
     
     .slide-content 
     { 
