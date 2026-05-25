@@ -1141,11 +1141,11 @@ header hr
     }
     
     .text-outline,
-    .text-fill
-    {
-        font-size: 30px;
-        letter-spacing: 0;
-    }
+.text-fill
+{
+    font-size: 42px;
+    font-weight: 900;
+}
 
     .center-text
     {
@@ -1165,7 +1165,7 @@ header hr
 
      .district
     {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: bold;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -1174,7 +1174,7 @@ header hr
 
    .reg-no
     {
-        font-size: 15px;
+        font-size: 12px;
         line-height: 1.6;
         padding: 0 10px;
     }
