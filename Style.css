@@ -1107,11 +1107,16 @@ footer
     
     /* HIDE EXTRA PHOTOS ON MOBILE */ 
     
-    .extra-left, 
-    .extra-right 
-    { 
-        display: none; 
-    } 
+    .extra-left,
+.extra-right
+{
+    position: static;
+    transform: none;
+    width: 75px;
+    height: 90px;
+    display: block;
+    margin: 5px auto;
+}
     
     .banner-svg 
     { 
