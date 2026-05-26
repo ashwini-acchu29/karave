@@ -6,7 +6,7 @@ const counter = document.getElementById("counter");
 let currentIndex = 0;
 
 const imagePath = "images/gallery-images/";
-const totalImages = 111;
+const totalImages = 149;
 const extension = ".jpeg"; // adjust if needed
 
 /* Create gallery */
