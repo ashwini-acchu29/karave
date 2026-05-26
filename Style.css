@@ -81,7 +81,7 @@
              text-align: center;
             }
      /* ===================================================== SVG TITLE ===================================================== */ 
-     .banner-wrapper 
+     /* .banner-wrapper 
      {
          margin: 0;
      } 
@@ -106,8 +106,42 @@
         font-weight: 900;
          fill: url(#grad1); 
          letter-spacing: 2px;
-     }
+     } */
      
+     /* ===================================================== SVG TITLE ===================================================== */
+
+.banner-wrapper
+{
+    margin: 0;
+    width: 100%;
+}
+
+.banner-svg
+{
+    width: 100%;
+    height: 200px;
+    overflow: visible;
+}
+
+.text-outline
+{
+    font-size: 58px;
+    font-weight: 900;
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.8px;
+    stroke-linejoin: round;
+    paint-order: stroke fill;
+    letter-spacing: 1px;
+}
+
+.text-fill
+{
+    font-size: 58px;
+    font-weight: 900;
+    fill: url(#grad1);
+    letter-spacing: 1px;
+}
 
      /* Text Below Title */
      .center-text p 
@@ -1138,7 +1172,7 @@ header hr
 
 
 
-    .banner-svg
+    /* .banner-svg
     {
         height: 170px;
         width: 100%;
@@ -1158,12 +1192,40 @@ header hr
     font-size: 42px;
     font-weight: 900;
     letter-spacing: 1px;
-} */
+} 
 
  svg text
 {
     dominant-baseline: middle;
+} */
+
+/* MOBILE SVG TITLE */
+
+.banner-wrapper
+{
+    width: 100%;
+    overflow: visible;
 }
+
+.banner-svg
+{
+    width: 100%;
+    height: 150px;
+}
+
+.text-outline
+{
+    font-size: 70px;
+    stroke-width: 1.2px;
+    letter-spacing: 0px;
+}
+
+.text-fill
+{
+    font-size: 70px;
+    letter-spacing: 0px;
+}
+
     .center-text
     {
         width: 100%;
