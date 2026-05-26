@@ -108,6 +108,7 @@
          letter-spacing: 2px;
      }
      
+
      /* Text Below Title */
      .center-text p 
      {
@@ -1134,7 +1135,9 @@ header hr
         object-fit: cover;
         margin: 0;
     }
-    
+
+
+
     .banner-svg
     {
         height: 170px;
@@ -1155,9 +1158,9 @@ header hr
     font-size: 42px;
     font-weight: 900;
     letter-spacing: 1px;
-}
+} */
 
-svg text
+ svg text
 {
     dominant-baseline: middle;
 }
