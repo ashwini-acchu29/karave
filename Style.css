@@ -1300,7 +1300,7 @@ header hr
 
 /* KEEP ONLY CLEAN FILL TEXT */
 
-.text-fill
+/* .text-fill
 {
     font-size: 70px;
 
@@ -1315,7 +1315,24 @@ header hr
     drop-shadow(-1px -1px 0 #000)
     drop-shadow(1px -1px 0 #000)
     drop-shadow(-1px 1px 0 #000);
+} */
+
+
+.text-fill
+{
+    font-size: 68px;
+
+    font-weight: 900;
+
+    letter-spacing: 0px;
+
+    fill: url(#grad1);
+
+    -webkit-text-stroke: 1px black;
+
+    paint-order: stroke fill;
 }
+
 
     .center-text
     {
