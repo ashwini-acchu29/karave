@@ -185,6 +185,12 @@
     fill: url(#grad1);
 
     letter-spacing: 1px;
+
+    filter:
+    drop-shadow(1px 1px 0 #000)
+    drop-shadow(-1px -1px 0 #000)
+    drop-shadow(1px -1px 0 #000)
+    drop-shadow(-1px 1px 0 #000);
 }
 
      /* Text Below Title */
@@ -1304,7 +1310,11 @@ header hr
 
     stroke: none;
 
-    paint-order: normal;
+    filter:
+    drop-shadow(1px 1px 0 #000)
+    drop-shadow(-1px -1px 0 #000)
+    drop-shadow(1px -1px 0 #000)
+    drop-shadow(-1px 1px 0 #000);
 }
 
     .center-text
