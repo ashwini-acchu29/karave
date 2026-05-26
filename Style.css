@@ -29,6 +29,7 @@
  {
      text-align: center; 
      z-index: 5; 
+     width: 100%;
     }
     
     /* MAIN SIDE IMAGES */ 
@@ -1136,13 +1137,14 @@ header hr
     
     .banner-svg
     {
-        height: 120px;
+        height: 170px;
         width: 100%;
+        overflow: visible;
     }
 
     .banner-wrapper
 {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     overflow: hidden;
 }
@@ -1150,8 +1152,9 @@ header hr
     .text-outline,
 .text-fill
 {
-    font-size: 27px;
-    letter-spacing: 0;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
 svg text
