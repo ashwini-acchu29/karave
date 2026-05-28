@@ -375,21 +375,23 @@
     } 
     
     .hero-slide 
-    { 
-        position: absolute; 
-        width: 100%; 
-        height: 100%; 
-        opacity: 0; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        transition: opacity 1s; 
-    } 
+{ 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: opacity 1s;
+    z-index: 1;
+}
     
     .hero-slide.active 
-    { 
-        opacity: 1; 
-    } 
+{ 
+    opacity: 1;
+    z-index: 2;
+}
     
    .hero-slide::before
 {
@@ -504,12 +506,14 @@
     /* Dots */ 
     
     .dots 
-    { 
-        position: absolute; 
-        bottom: 10px; 
-        width: 100%; 
-        text-align: center;
-    } 
+{ 
+    position: absolute; 
+    bottom: 10px; 
+    width: 100%; 
+    text-align: center;
+    z-index: 20;
+}
+
     .dot 
     { 
         width: 12px; 
@@ -518,6 +522,9 @@
         margin: 5px; 
         border-radius: 50%; 
         cursor: pointer; 
+  position: relative;
+    z-index: 21;
+
     } 
     .dot.active 
     { 
