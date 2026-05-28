@@ -1594,6 +1594,12 @@ nav
         text-align: left;
     }
 
+/* =================  team section ===================== */
+ .team-section
+    {
+        padding-left: 8px;
+        padding-right: 0;
+    }
 
        .team-slider
     {
@@ -1601,7 +1607,7 @@ nav
         align-items: center;
 
         gap: 4px;
-
+ margin-left: -6px;
         padding: 0 2px;
     }
 
