@@ -1603,94 +1603,93 @@ nav
     overflow: hidden;
 }
 
-      .team-slider
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+     .team-slider
+    {
+        display: flex;
+        align-items: center;
 
-    gap: 6px;
+        gap: 4px;
 
-    width: 100%;
-}
+        padding: 0 2px;
+    }
+
 
     .team-container
-{
-    display: flex;
+    {
+        display: flex;
 
-    gap: 12px;
+        gap: 10px;
 
-    overflow-x: auto;
+        overflow-x: auto;
 
-    scroll-behavior: smooth;
+        scroll-behavior: smooth;
 
-    width: 100%;
+        padding-left: 0;
+        padding-right: 0;
 
-    padding: 0;
+        width: 100%;
+    }
 
-    scrollbar-width: none;
-}
-
-.team-container::-webkit-scrollbar
-{
-    display: none;
-}
 
 .team-card
-{
-    min-width: 200px;
+    {
+        min-width: 205px;
+        max-width: 205px;
 
-    max-width: 200px;
+        padding: 12px 6px;
 
-    flex-shrink: 0;
+        text-align: left;
 
-    padding: 10px 6px;
+        flex-shrink: 0;
+    }
 
-    text-align: left;
-}
+     .team-card img
+    {
+        width: 120px;
+        height: 120px;
+
+        margin-left: 4px;
+    }
 
 
-   .team-card h4
-{
-    font-size: 16px;
+    .team-card h4
+    {
+        font-size: 17px;
 
-    margin-top: 10px;
+        padding-left: 4px;
 
-    padding-left: 4px;
-}
+        margin-top: 10px;
+    }
 
-    .team-card p
-{
-    font-size: 13px;
 
-    line-height: 1.5;
+     .team-card p
+    {
+        font-size: 13px;
 
-    padding-left: 4px;
+        line-height: 1.5;
 
-    word-break: break-word;
-}
-  .team-card img
-{
-    width: 120px;
-    height: 120px;
+        padding-left: 4px;
+        padding-right: 2px;
 
-    object-fit: cover;
-    object-position: top;
+        margin: 4px 0;
 
-    margin-left: 4px;
-}
+        white-space: normal;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+  
 
     .slider-btn
-{
-    width: 32px;
-    height: 32px;
+    {
+        width: 28px;
+        height: 28px;
 
-    font-size: 18px;
+        font-size: 18px;
 
-    flex-shrink: 0;
-
-    z-index: 10;
-}
+        flex-shrink: 0;
+    }
 
 
 
