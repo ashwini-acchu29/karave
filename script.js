@@ -6,6 +6,7 @@ let progressBar;
 
 let currentIndex = 0;
 let interval;
+let isPaused = false;
 
 /* Kannada letters */
 const kannadaLetters = [
@@ -94,6 +95,7 @@ function showHeroSlide(index) {
     progressBar.offsetHeight;
 
     progressBar.style.animation = "progress 4.2s linear forwards";
+progressBar.style.animationPlayState = "running";
 }
 }
 
@@ -118,6 +120,35 @@ function resetInterval() {
     startInterval();
 }
 
+/* Pause slider */
+
+function pauseSlider()
+{
+    isPaused = true;
+
+    clearInterval(interval);
+
+    if (progressBar)
+    {
+        progressBar.style.animationPlayState = "paused";
+    }
+}
+
+/* Resume slider */
+
+function resumeSlider()
+{
+    if (!isPaused) return;
+
+    isPaused = false;
+
+    if (progressBar)
+    {
+        progressBar.style.animationPlayState = "running";
+    }
+
+    startInterval();
+}
 
 /* ================= PHOTO SLIDER ================= */
 
@@ -174,12 +205,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    /* Init hero slider */
-    if (heroSlides.length > 0) {
-        createLetters();
-        showHeroSlide(currentIndex);
-        startInterval();
+   /* Init hero slider */
+if (heroSlides.length > 0) {
+
+    createLetters();
+    showHeroSlide(currentIndex);
+    startInterval();
+
+    /* Pause on touch */
+
+    const hero = document.querySelector(".hero");
+
+    if (hero)
+    {
+        hero.addEventListener("touchstart", pauseSlider);
+
+        hero.addEventListener("touchend", resumeSlider);
+
+        hero.addEventListener("mousedown", pauseSlider);
+
+        hero.addEventListener("mouseup", resumeSlider);
+
+        hero.addEventListener("mouseleave", resumeSlider);
     }
+}
 
     /* Init photo slider */
     if (photoSlides.length > 0) {
