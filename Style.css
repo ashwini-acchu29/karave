@@ -1580,6 +1580,15 @@ nav
     height: 240px; 
 } 
 
+.hero-content
+    {
+        width: 88%;
+        padding-left: 12px;
+        padding-right: 55px;
+
+        text-align: left;
+    }
+
 .gallery 
 { 
     grid-template-columns: repeat(2, 1fr); 
