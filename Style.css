@@ -1595,6 +1595,16 @@ nav
     }
 
 /* =================  team section ===================== */
+
+ .about-section.team-section
+    {
+        width: 85%;
+        margin: 35px auto;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
  .team-section
     {
         padding-left: 8px;
