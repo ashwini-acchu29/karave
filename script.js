@@ -9,6 +9,7 @@ let interval;
 let isPaused = false;
 
 /* Kannada letters */
+
 const kannadaLetters = [
     "ಅ","ಆ","ಇ","ಈ","ಉ","ಊ","ಎ","ಏ","ಐ","ಒ","ಓ",
     "ಕ","ಗ","ಚ","ಜ","ಟ","ಡ","ತ","ದ","ಪ","ಬ",
@@ -16,19 +17,23 @@ const kannadaLetters = [
 ];
 
 /* Create scattered letters */
-function createLetters() {
+
+function createLetters()
+{
     document.querySelectorAll(".letters-bg").forEach(container => {
+
         container.innerHTML = "";
 
         let positions = [];
         let maxLetters = 30;
 
-        for (let i = 0; i < maxLetters; i++) {
-
+        for (let i = 0; i < maxLetters; i++)
+        {
             let tries = 0;
             let placed = false;
 
-            while (!placed && tries < 50) {
+            while (!placed && tries < 50)
+            {
                 tries++;
 
                 let top = Math.random() * 100;
@@ -37,37 +42,47 @@ function createLetters() {
 
                 let valid = true;
 
-                for (let pos of positions) {
+                for (let pos of positions)
+                {
                     let distance = Math.sqrt(
                         Math.pow(top - pos.top, 2) +
                         Math.pow(left - pos.left, 2)
                     );
 
-                    if (distance < (fontSize / 3)) {
+                    if (distance < (fontSize / 3))
+                    {
                         valid = false;
                         break;
                     }
                 }
 
-                if (valid) {
+                if (valid)
+                {
                     positions.push({ top, left });
 
                     let span = document.createElement("span");
+
                     span.classList.add("letter");
 
                     span.innerText =
-                        kannadaLetters[Math.floor(Math.random() * kannadaLetters.length)];
+                        kannadaLetters[
+                            Math.floor(Math.random() * kannadaLetters.length)
+                        ];
 
                     span.style.top = top + "%";
                     span.style.left = left + "%";
                     span.style.fontSize = fontSize + "px";
 
                     let rotate = Math.random() * 360;
-                    span.style.transform = `scale(0.5) rotate(${rotate}deg)`;
 
-                    span.style.animationDelay = (Math.random() * 1.2) + "s";
+                    span.style.transform =
+                        `scale(0.5) rotate(${rotate}deg)`;
+
+                    span.style.animationDelay =
+                        (Math.random() * 1.2) + "s";
 
                     container.appendChild(span);
+
                     placed = true;
                 }
             }
@@ -76,47 +91,87 @@ function createLetters() {
 }
 
 /* Show hero slide */
-function showHeroSlide(index) {
+
+function showHeroSlide(index)
+{
     if (!heroSlides.length) return;
 
-    heroSlides.forEach(s => s.classList.remove("active"));
-    dots.forEach(d => d.classList.remove("active"));
+    heroSlides.forEach(slide =>
+        slide.classList.remove("active")
+    );
 
-    if (heroSlides[index]) heroSlides[index].classList.add("active");
-    if (dots[index]) dots[index].classList.add("active");
+    dots.forEach(dot =>
+        dot.classList.remove("active")
+    );
+
+    if (heroSlides[index])
+    {
+        heroSlides[index].classList.add("active");
+    }
+
+    if (dots[index])
+    {
+        dots[index].classList.add("active");
+    }
 
     createLetters();
 
-    if (progressBar) {
+    /* Restart progress bar */
 
-    progressBar.style.animation = "none";
-    progressBar.style.width = "0%";
+    if (progressBar)
+    {
+        progressBar.style.animation = "none";
+        progressBar.style.width = "0%";
 
-    progressBar.offsetHeight;
+        progressBar.offsetHeight;
 
-    progressBar.style.animation = "progress 4.2s linear forwards";
-progressBar.style.animationPlayState = "running";
-}
+        progressBar.style.animation =
+            "progress 4.2s linear forwards";
+
+        progressBar.style.animationPlayState = "running";
+    }
 }
 
 /* Hero auto slide */
-function slideHero() {
-    currentIndex = (currentIndex + 1) % heroSlides.length;
+
+function slideHero()
+{
+    currentIndex =
+        (currentIndex + 1) % heroSlides.length;
+
     showHeroSlide(currentIndex);
 }
 
-function goToSlide(index) {
+/* Dot click */
+
+function goToSlide(index)
+{
     currentIndex = index;
+
     showHeroSlide(index);
+
     resetInterval();
 }
 
-function startInterval() {
-    interval = setInterval(slideHero, 4200);
+/* Start auto slider */
+
+function startInterval()
+{
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+
+        slideHero();
+
+    }, 4200);
 }
 
-function resetInterval() {
+/* Reset auto slider */
+
+function resetInterval()
+{
     clearInterval(interval);
+
     startInterval();
 }
 
@@ -124,6 +179,8 @@ function resetInterval() {
 
 function pauseSlider()
 {
+    if (isPaused) return;
+
     isPaused = true;
 
     clearInterval(interval);
@@ -155,101 +212,141 @@ function resumeSlider()
 let photoSlides = [];
 let photoIndex = 0;
 
-function showPhotoSlide(index) {
+function showPhotoSlide(index)
+{
     if (!photoSlides.length) return;
 
-    photoSlides.forEach(slide => slide.classList.remove("active"));
+    photoSlides.forEach(slide =>
+        slide.classList.remove("active")
+    );
 
-    if (photoSlides[index]) {
+    if (photoSlides[index])
+    {
         photoSlides[index].classList.add("active");
     }
 }
 
-function changeSlide(direction) {
+function changeSlide(direction)
+{
     if (!photoSlides.length) return;
 
     photoIndex += direction;
 
-    if (photoIndex >= photoSlides.length) photoIndex = 0;
-    if (photoIndex < 0) photoIndex = photoSlides.length - 1;
+    if (photoIndex >= photoSlides.length)
+    {
+        photoIndex = 0;
+    }
+
+    if (photoIndex < 0)
+    {
+        photoIndex = photoSlides.length - 1;
+    }
 
     showPhotoSlide(photoIndex);
 }
-
 
 /* ================= INIT ================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* Select elements AFTER DOM loads */
-    heroSlides = document.querySelectorAll(".hero-slide");
-    dots = document.querySelectorAll(".dot");
-    progressBar = document.querySelector(".progress-bar");
+    /* Select elements */
 
-    photoSlides = document.querySelectorAll(".photo-slider .slide");
+    heroSlides =
+        document.querySelectorAll(".hero-slide");
 
-    /* ✅ Set blur background from image */
+    dots =
+        document.querySelectorAll(".dot");
+
+    progressBar =
+        document.querySelector(".progress-bar");
+
+    photoSlides =
+        document.querySelectorAll(".photo-slider .slide");
+
+    /* Set blur background */
+
     photoSlides.forEach(slide => {
+
         const img = slide.querySelector("img");
 
-        if (img) {
+        if (img)
+        {
             const setBg = () => {
-                slide.style.setProperty("--bg", `url('${img.src}')`);
+
+                slide.style.setProperty(
+                    "--bg",
+                    `url('${img.src}')`
+                );
             };
 
-            if (img.complete) {
+            if (img.complete)
+            {
                 setBg();
-            } else {
+            }
+            else
+            {
                 img.onload = setBg;
             }
         }
     });
 
-   /* Init hero slider */
-if (heroSlides.length > 0) {
+    /* ================= HERO INIT ================= */
 
-    createLetters();
-    showHeroSlide(currentIndex);
-    startInterval();
-
-    /* Pause on touch */
-
-    const hero = document.querySelector(".hero");
-
-    if (hero)
+    if (heroSlides.length > 0)
     {
-        hero.addEventListener("touchstart", pauseSlider);
+        createLetters();
 
-        hero.addEventListener("touchend", resumeSlider);
+        showHeroSlide(currentIndex);
 
-        hero.addEventListener("mousedown", pauseSlider);
+        startInterval();
 
-        hero.addEventListener("mouseup", resumeSlider);
+        /* Mobile touch pause */
 
-        hero.addEventListener("mouseleave", resumeSlider);
+        const hero =
+            document.querySelector(".hero");
+
+        if (hero)
+        {
+            hero.addEventListener(
+                "touchstart",
+                pauseSlider
+            );
+
+            hero.addEventListener(
+                "touchend",
+                resumeSlider
+            );
+        }
     }
-}
 
-    /* Init photo slider */
-    if (photoSlides.length > 0) {
+    /* ================= PHOTO INIT ================= */
+
+    if (photoSlides.length > 0)
+    {
         showPhotoSlide(photoIndex);
 
         setInterval(() => {
+
             changeSlide(1);
+
         }, 4000);
     }
 
-
     /* ================= TEAM SLIDER ================= */
 
-    const teamContainer = document.querySelector('.team-container');
+    const teamContainer =
+        document.querySelector('.team-container');
 
-    const nextBtn = document.querySelector('.team-slider .next');
-const prevBtn = document.querySelector('.team-slider .prev');
+    const nextBtn =
+        document.querySelector('.team-slider .next');
 
-    if (teamContainer && nextBtn && prevBtn) {
+    const prevBtn =
+        document.querySelector('.team-slider .prev');
 
+    if (teamContainer && nextBtn && prevBtn)
+    {
         nextBtn.addEventListener('click', () => {
+
             teamContainer.scrollBy({
                 left: 220,
                 behavior: 'smooth'
@@ -257,12 +354,12 @@ const prevBtn = document.querySelector('.team-slider .prev');
         });
 
         prevBtn.addEventListener('click', () => {
+
             teamContainer.scrollBy({
                 left: -220,
                 behavior: 'smooth'
             });
         });
-
     }
 
 });
