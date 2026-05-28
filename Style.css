@@ -1604,37 +1604,42 @@ nav
         padding-right: 20px;
     }
 
-    .team-card
-    {
-        min-width: 220px;
-        max-width: 220px;
+   .team-card
+{
+    min-width: 220px;
+    max-width: 220px;
 
-        padding: 15px 12px;
-    }
+    padding: 15px 8px;
+    text-align: left;
+}
+
 
     .team-card h4
-    {
-        font-size: 18px;
+{
+    padding-left: 8px;
+}
 
-        word-break: break-word;
-    }
+   .team-card p
+{
+    font-size: 14px;
+    line-height: 1.5;
 
-    .team-card p
-    {
-        font-size: 14px;
-        line-height: 1.5;
+    padding-left: 8px;
+    padding-right: 2px;
 
-        word-break: break-word;
-        overflow-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
 
-        white-space: normal;
-    }
+   .team-card img
+{
+    width: 120px;
+    height: 120px;
 
-    .team-card img
-    {
-        width: 120px;
-        height: 120px;
-    }
+    margin-left: 8px;
+}
+
 }
 
 .gallery 
