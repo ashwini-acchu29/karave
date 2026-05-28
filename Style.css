@@ -1442,11 +1442,11 @@ nav
     max-width: 90%;
 
     background: linear-gradient(
-        135deg,
-        rgba(198,40,40,0.88),
-        rgba(253,216,53,0.82)
-    );
-
+    135deg,
+    rgba(140,0,0,0.92),
+    rgba(255,193,7,0.92)
+);
+border: 2px solid rgba(255,255,255,0.18);
     padding: 10px 14px;
 
     border-radius: 14px;
