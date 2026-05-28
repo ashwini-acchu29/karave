@@ -1598,92 +1598,99 @@ nav
 /* =================  team section ===================== */
     
  .team-section
-    {
-        padding-left: 8px;
-        padding-right: 0;
-    }
+{
+    padding: 18px 10px;
+    overflow: hidden;
+}
 
-       .team-slider
-    {
-        display: flex;
-        align-items: center;
+      .team-slider
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        gap: 4px;
- margin-left: -6px;
-        padding: 0 2px;
-    }
+    gap: 6px;
+
+    width: 100%;
+}
 
     .team-container
-    {
-        display: flex;
+{
+    display: flex;
 
-        gap: 10px;
+    gap: 12px;
 
-        overflow-x: auto;
+    overflow-x: auto;
 
-        scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
-        padding-left: 0;
-        padding-right: 0;
+    width: 100%;
 
-        width: 100%;
-    }
+    padding: 0;
 
-       .team-card
-    {
-        min-width: 205px;
-        max-width: 205px;
+    scrollbar-width: none;
+}
 
-        padding: 12px 6px;
+.team-container::-webkit-scrollbar
+{
+    display: none;
+}
 
-        text-align: left;
+.team-card
+{
+    min-width: 200px;
 
-        flex-shrink: 0;
-    }
+    max-width: 200px;
 
-    .team-card h4
-    {
-        font-size: 17px;
+    flex-shrink: 0;
 
-        padding-left: 4px;
+    padding: 10px 6px;
 
-        margin-top: 10px;
-    }
+    text-align: left;
+}
+
+
+   .team-card h4
+{
+    font-size: 16px;
+
+    margin-top: 10px;
+
+    padding-left: 4px;
+}
 
     .team-card p
-    {
-        font-size: 13px;
+{
+    font-size: 13px;
 
-        line-height: 1.5;
+    line-height: 1.5;
 
-        padding-left: 4px;
-        padding-right: 2px;
+    padding-left: 4px;
 
-        margin: 4px 0;
+    word-break: break-word;
+}
+  .team-card img
+{
+    width: 120px;
+    height: 120px;
 
-        white-space: normal;
+    object-fit: cover;
+    object-position: top;
 
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
+    margin-left: 4px;
+}
 
-   .team-card img
-    {
-        width: 120px;
-        height: 120px;
+    .slider-btn
+{
+    width: 32px;
+    height: 32px;
 
-        margin-left: 4px;
-    }
+    font-size: 18px;
 
-     .slider-btn
-    {
-        width: 28px;
-        height: 28px;
+    flex-shrink: 0;
 
-        font-size: 18px;
-
-        flex-shrink: 0;
-    }
+    z-index: 10;
+}
 
 
 
