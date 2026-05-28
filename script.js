@@ -87,10 +87,14 @@ function showHeroSlide(index) {
     createLetters();
 
     if (progressBar) {
-        progressBar.style.animation = "none";
-        progressBar.offsetHeight;
-        progressBar.style.animation = "progress 4s linear forwards";
-    }
+
+    progressBar.style.animation = "none";
+    progressBar.style.width = "0%";
+
+    progressBar.offsetHeight;
+
+    progressBar.style.animation = "progress 4.2s linear forwards";
+}
 }
 
 /* Hero auto slide */
@@ -106,7 +110,7 @@ function goToSlide(index) {
 }
 
 function startInterval() {
-    interval = setInterval(slideHero, 4000);
+    interval = setInterval(slideHero, 4200);
 }
 
 function resetInterval() {
