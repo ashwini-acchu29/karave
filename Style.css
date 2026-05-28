@@ -803,7 +803,8 @@
         box-shadow: 0 3px 10px rgba(0,0,0,0.08); 
         
     /* text-align: center; position: relative; overflow: hidden; */ 
-} 
+    }
+
 .leader-img, 
 .nagaraj-name, 
 .leader-card h3 
@@ -1683,6 +1684,7 @@ nav
 
         flex-shrink: 0;
     }
+
 
 
 .gallery 
