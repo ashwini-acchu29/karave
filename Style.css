@@ -1326,7 +1326,7 @@ header hr
 {
     position: absolute;
 
-    left: 80px;
+    left: 18%;
     top: 100px;
 
     width: 80px;
@@ -1340,7 +1340,7 @@ header hr
 {
     position: absolute;
 
-    right: 100px;
+    right: 18%;
     top: 100px;
 
     width: 80px;
