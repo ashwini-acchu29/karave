@@ -1628,8 +1628,10 @@ nav
    nav a
 {
     display: inline-block;
-    margin: 5px 2px;
-    font-size: 12px;
+    margin: 5px 4px;
+    font-size: 13px;
+
+    white-space: nowrap;
 }
     
     section 
