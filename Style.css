@@ -1536,7 +1536,7 @@ header hr
     {
         width: 100%;
         order: 2;
-        margin-top: 0px;   /* reduced */
+        margin-top: -8px;   /* reduced */
     padding-top: 0;
     }
 
