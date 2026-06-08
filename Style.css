@@ -1943,11 +1943,11 @@ nav
 
 @media (max-width: 480px) 
 { 
-    nav a 
+    /* nav a 
     { 
         font-size: 12px; 
         margin: 4px; 
-    } 
+    }  */
     
     .gallery img 
     { 
