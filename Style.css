@@ -1351,33 +1351,32 @@ header hr
     z-index: 5; */
 /* } */
 
-
 .left-caption
 {
     position: absolute;
 
-    left: 72px;
+    left: 31%;
     top: 100px;
 
     width: 65px;
 
-    text-align: center;
+    transform: translateX(-50%);
 
-    z-index: 5;
+    text-align: center;
 }
 
 .right-caption
 {
     position: absolute;
 
-    right: 72px;
+    left: 69%;
     top: 100px;
 
     width: 65px;
 
-    text-align: center;
+    transform: translateX(-50%);
 
-    z-index: 5;
+    text-align: center;
 }
 
 .cap-name
