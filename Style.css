@@ -1291,7 +1291,6 @@ header hr
     gap: 6px;
     padding: 8px 10px;
     text-align: center;
-    position: relative;
 }
     
     /* MOBILE HEADER IMAGES */ 
@@ -1351,7 +1350,37 @@ header hr
     z-index: 5; */
 /* } */
 
-.left-caption
+
+.leader-left,
+.leader-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-caption,
+.right-caption
+{
+    position: static;
+    width: 65px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.cap-name
+{
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.cap-post
+{
+    font-size: 7px;
+    line-height: 1.2;
+}
+
+/* .left-caption
 {
     position: absolute;
 
@@ -1377,19 +1406,9 @@ header hr
     transform: translateX(-50%);
 
     text-align: center;
-}
+}  */
 
-.cap-name
-{
-    font-size: 8px;
-    font-weight: bold;
-}
-
-.cap-post
-{
-    font-size: 7px;
-    line-height: 1.2;
-}
+  
 
 
     /* .banner-svg
