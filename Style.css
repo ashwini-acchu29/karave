@@ -1363,7 +1363,7 @@ header hr
 .right-caption
 {
     position: static;
-    width: 65px;
+    width: 90px;
     text-align: center;
     margin-top: 4px;
 }
@@ -1372,13 +1372,18 @@ header hr
 {
     font-size: 8px;
     font-weight: bold;
+    /* min-height: 20px; */
+    white-space: nowrap;
 }
 
 .cap-post
 {
     font-size: 7px;
     line-height: 1.2;
+    min-height: 18px;
 }
+
+
 
 /* .left-caption
 {
