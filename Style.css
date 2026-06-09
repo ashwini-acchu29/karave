@@ -1809,14 +1809,18 @@ nav
     }
 
 
-   .leader-text
+  .leader-text
 {
-    max-width: 95%;
-    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
 
-    text-align: left;
     line-height: 1.6;
     font-family: 'Noto Sans Kannada', sans-serif;
+
+    word-spacing: normal;
+    letter-spacing: normal;
+
+    hyphens: none;
 }
 /* =================  team section ===================== */
     
