@@ -1810,14 +1810,14 @@ nav
 
 
    .leader-text
-    {
-        text-align: left;
-        line-height: 1.6;
-        word-spacing: normal;
-        letter-spacing: normal;
-        font-family: 'Noto Sans Kannada', sans-serif;
-        
-    }
+{
+    max-width: 95%;
+    margin: 0 auto;
+
+    text-align: justify;
+    line-height: 1.6;
+    font-family: 'Noto Sans Kannada', sans-serif;
+}
 /* =================  team section ===================== */
     
  .team-section
