@@ -1799,7 +1799,7 @@ nav
     height: 240px; 
 } 
 
-.hero-content
+   .hero-content
     {
         width: 88%;
         padding-left: 12px;
@@ -1808,6 +1808,15 @@ nav
         text-align: left;
     }
 
+
+    .leader-text
+    {
+        text-align: justify;
+        text-justify: inter-word;
+
+        word-spacing: -1px;
+        letter-spacing: 0px;
+    }
 /* =================  team section ===================== */
     
  .team-section
