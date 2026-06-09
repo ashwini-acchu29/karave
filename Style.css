@@ -1808,14 +1808,41 @@ nav
         text-align: left;
     }
 
-
-  .leader-text
+@media (max-width: 768px)
+{
+    .leader-card
     {
-        text-align: justify;
-        text-justify: inter-word;
-
-        word-spacing: normal;
+        margin: 10px;
+        padding: 12px;
+        max-width: 100%;
     }
+
+    .leader-img
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nagaraj-name
+    {
+        font-size: 16px;
+    }
+
+    .leader-card h3
+    {
+        font-size: 13px;
+    }
+
+    .leader-text
+    {
+        text-align: left;
+        line-height: 1.6;
+        font-family: 'Noto Sans Kannada', sans-serif;
+        word-spacing: normal;
+        max-width: 100%;
+    }
+}
+
 /* =================  team section ===================== */
     
  .team-section
