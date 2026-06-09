@@ -1622,14 +1622,14 @@ header hr
 
 nav
 {
-    padding: 10px 5px;
+    padding: 10px 2px;
 }
 
    nav a
 {
     display: inline-block;
-    margin: 5px 4px;
-    font-size: 13px;
+    margin: 5px 2px;
+    font-size: 12px;
 
     white-space: nowrap;
 }
