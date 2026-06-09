@@ -1809,13 +1809,12 @@ nav
     }
 
 
-    .leader-text
+   .leader-text
     {
-        text-align: justify;
-        text-justify: inter-word;
-
-        word-spacing: -1px;
-        letter-spacing: 0px;
+        text-align: left;
+        line-height: 1.6;
+        word-spacing: normal;
+        letter-spacing: normal;
     }
 /* =================  team section ===================== */
     
